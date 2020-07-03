@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Date Available</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for avail in availabilities %}
+    <tr>
+      <td>{{avail.user.name}}</td>
+      <td>{{avail.date_available}}</td>
+      <td>{{avail.start_time}}</td>
+      <td>{{avail.end_time}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
