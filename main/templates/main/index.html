@@ -1,4 +1,7 @@
-<table class="table">
+{% extends 'base.html' %}
+<!--  -->
+{% block content%}
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>User</th>
@@ -10,7 +13,7 @@
   <tbody>
     {% for avail in availabilities %}
     <tr>
-      <td>{{avail.user.name}}</td>
+      <td>{{avail.user}}</td>
       <td>{{avail.date_available}}</td>
       <td>{{avail.start_time}}</td>
       <td>{{avail.end_time}}</td>
@@ -18,3 +21,4 @@
     {% endfor %}
   </tbody>
 </table>
+{% endblock %}

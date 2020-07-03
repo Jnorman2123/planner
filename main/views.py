@@ -6,4 +6,4 @@ from .models import Availability
 
 def index(request):
     availabilities = Availability.objects.all()
-    return render(request, 'index.html', {'availabilities': availabilities})
+    return render(request, 'main/index.html', {'availabilities': availabilities})
